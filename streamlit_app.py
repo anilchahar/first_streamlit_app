@@ -1,7 +1,6 @@
 import streamlit
+import pandas as p
 
-streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-streamlit.header('Breakfast Menu')
-streamlit.text('Omega 3 and Blueberry Oatmeal')
-streamlit.text('Kadhi Chawal and Rajma Chole')
-streamlit.text('Dal Roti')
+my_fruit_list = p.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+
+streamlit.dataframe(my_fruit_list)
